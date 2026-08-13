@@ -106,6 +106,14 @@ const JA_TRANSLATED_PAGES: Record<string, string> = {
   '/guides/local-app-production': 'リリース',
   '/guides/cache-builds-remotely': 'ビルドをリモートでキャッシュする',
   '/guides/prebuilt-expo-modules': 'プリコンパイル済み Expo Modules',
+  '/workflow/web': 'web サイトを開発する',
+  '/guides/publishing-websites': 'web サイトを公開する',
+  '/guides/dom-components': 'DOM コンポーネント',
+  '/guides/server-components': 'React Server Components',
+  '/guides/testing-rsc': 'RSC のテスト',
+  '/guides/progressive-web-apps': 'プログレッシブ web アプリ',
+  '/guides/tailwind': 'Tailwind CSS',
+  '/guides/local-https-development': 'ローカル HTTPS 開発',
 };
 
 export const JA_TRANSLATED_PATHS: ReadonlySet<string> = new Set(Object.keys(JA_TRANSLATED_PAGES));
@@ -127,6 +135,7 @@ const JA_SECTION_TITLES: Record<string, string> = {
   Linking: 'リンク',
   'Write native code': 'ネイティブコードを書く',
   'Build locally': 'ローカルでビルドする',
+  Web: 'web',
   'Expo tutorial': 'Expo チュートリアル',
   'Build with AI tutorial': 'AI エージェントで作るチュートリアル',
   'CI/CD tutorial': 'CI/CD チュートリアル',

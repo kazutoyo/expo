@@ -66,6 +66,14 @@ const DEVELOPMENT_PROCESS_PAGES = [
   '/guides/local-app-production',
   '/guides/cache-builds-remotely',
   '/guides/prebuilt-expo-modules',
+  '/workflow/web',
+  '/guides/publishing-websites',
+  '/guides/dom-components',
+  '/guides/server-components',
+  '/guides/testing-rsc',
+  '/guides/progressive-web-apps',
+  '/guides/tailwind',
+  '/guides/local-https-development',
 ];
 
 describe('hasJapaneseTranslation', () => {
