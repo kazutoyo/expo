@@ -129,6 +129,14 @@ const JA_TRANSLATED_PAGES: Record<string, string> = {
   '/brownfield/isolated-approach': '分離アプローチ',
   '/brownfield/integrated-approach': '統合アプローチ',
   '/brownfield/lifecycle-listeners': 'Lifecycle listeners',
+  '/guides/monorepos': 'monorepo で開発する',
+  '/workflow/logging': 'ログを見る',
+  '/workflow/development-mode': '開発モードと本番モード',
+  '/workflow/common-development-errors': 'よくある開発時のエラー',
+  '/workflow/android-studio-emulator': 'Android Studio Emulator',
+  '/workflow/ios-simulator': 'iOS Simulator',
+  '/guides/new-architecture': 'New Architecture',
+  '/guides/react-compiler': 'React Compiler',
 };
 
 export const JA_TRANSLATED_PATHS: ReadonlySet<string> = new Set(Object.keys(JA_TRANSLATED_PAGES));
@@ -154,6 +162,7 @@ const JA_SECTION_TITLES: Record<string, string> = {
   Bundling: 'バンドル',
   'Existing React Native apps': '既存の React Native アプリ',
   'Existing native apps': '既存のネイティブアプリ',
+  Reference: 'リファレンス',
   'Expo tutorial': 'Expo チュートリアル',
   'Build with AI tutorial': 'AI エージェントで作るチュートリアル',
   'CI/CD tutorial': 'CI/CD チュートリアル',

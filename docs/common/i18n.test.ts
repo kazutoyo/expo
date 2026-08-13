@@ -89,6 +89,14 @@ const DEVELOPMENT_PROCESS_PAGES = [
   '/brownfield/isolated-approach',
   '/brownfield/integrated-approach',
   '/brownfield/lifecycle-listeners',
+  '/guides/monorepos',
+  '/workflow/logging',
+  '/workflow/development-mode',
+  '/workflow/common-development-errors',
+  '/workflow/android-studio-emulator',
+  '/workflow/ios-simulator',
+  '/guides/new-architecture',
+  '/guides/react-compiler',
 ];
 
 describe('hasJapaneseTranslation', () => {

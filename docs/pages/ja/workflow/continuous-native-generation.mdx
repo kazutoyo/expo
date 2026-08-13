@@ -302,7 +302,7 @@ Prebuild は、Expo SDK がサポートするネイティブプラットフォ�
 
 #### モジュール化・自動化するより直接変更する方が速い場合
 
-すべてのネイティブの変更は、ネイティブモジュール（React Native 組み込みの Native Module API または Expo Modules API を使用）と config plugin を使って追加する必要があります。つまり、実験のためにプロジェクトへ素早くネイティブファイルを追加したい場合は、prebuild を実行してからファイルを手動で追加し、[monorepo](/guides/monorepos) を使ってこの仕組みに戻していく方がよいかもしれません。私たちは、ネイティブディレクトリの外にあるネイティブプロジェクトファイルを見つけ、ビルド前にそれらをリンクする機能を [Expo Autolinking](/more/glossary-of-terms#expo-autolinking) に追加することで、このプロセスを高速化する予定です。
+すべてのネイティブの変更は、ネイティブモジュール（React Native 組み込みの Native Module API または Expo Modules API を使用）と config plugin を使って追加する必要があります。つまり、実験のためにプロジェクトへ素早くネイティブファイルを追加したい場合は、prebuild を実行してからファイルを手動で追加し、[monorepo](/ja/guides/monorepos) を使ってこの仕組みに戻していく方がよいかもしれません。私たちは、ネイティブディレクトリの外にあるネイティブプロジェクトファイルを見つけ、ビルド前にそれらをリンクする機能を [Expo Autolinking](/more/glossary-of-terms#expo-autolinking) に追加することで、このプロセスを高速化する予定です。
 
 **gradle.properties** ファイルのような設定を変更したい場合は、プラグインを書く必要があります（[例](https://github.com/expo/expo/blob/1c994bb042ad47fbf6878e3b5793d4545f2d1208/apps/native-component-list/app.config.js#L21-L28)）。これはヘルパーとなるプラグインライブラリを使えば簡単に自動化できますが、頻繁に行う必要がある場合は少し手間がかかります。
 
