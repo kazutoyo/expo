@@ -85,6 +85,10 @@ const DEVELOPMENT_PROCESS_PAGES = [
   '/bare/installing-updates',
   '/bare/install-dev-builds-in-bare',
   '/bare/upgrade',
+  '/brownfield/overview',
+  '/brownfield/isolated-approach',
+  '/brownfield/integrated-approach',
+  '/brownfield/lifecycle-listeners',
 ];
 
 describe('hasJapaneseTranslation', () => {

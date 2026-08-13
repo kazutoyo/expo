@@ -125,6 +125,10 @@ const JA_TRANSLATED_PAGES: Record<string, string> = {
   '/bare/installing-updates': 'expo-updates をインストールする',
   '/bare/install-dev-builds-in-bare': 'expo-dev-client をインストールする',
   '/bare/upgrade': 'ネイティブプロジェクトのアップグレードヘルパー',
+  '/brownfield/overview': '概要',
+  '/brownfield/isolated-approach': '分離アプローチ',
+  '/brownfield/integrated-approach': '統合アプローチ',
+  '/brownfield/lifecycle-listeners': 'Lifecycle listeners',
 };
 
 export const JA_TRANSLATED_PATHS: ReadonlySet<string> = new Set(Object.keys(JA_TRANSLATED_PAGES));
@@ -149,6 +153,7 @@ const JA_SECTION_TITLES: Record<string, string> = {
   Web: 'web',
   Bundling: 'バンドル',
   'Existing React Native apps': '既存の React Native アプリ',
+  'Existing native apps': '既存のネイティブアプリ',
   'Expo tutorial': 'Expo チュートリアル',
   'Build with AI tutorial': 'AI エージェントで作るチュートリアル',
   'CI/CD tutorial': 'CI/CD チュートリアル',
