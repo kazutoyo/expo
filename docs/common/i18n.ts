@@ -99,6 +99,13 @@ const JA_TRANSLATED_PAGES: Record<string, string> = {
   '/linking/into-your-app': '自分のアプリへのリンク',
   '/linking/android-app-links': 'Android App Links',
   '/linking/ios-universal-links': 'iOS Universal Links',
+  '/workflow/customizing': 'カスタムネイティブコードを追加する',
+  '/guides/adopting-prebuild': 'Prebuild を導入する',
+  '/guides/local-app-overview': '概要',
+  '/guides/local-app-development': '開発',
+  '/guides/local-app-production': 'リリース',
+  '/guides/cache-builds-remotely': 'ビルドをリモートでキャッシュする',
+  '/guides/prebuilt-expo-modules': 'プリコンパイル済み Expo Modules',
 };
 
 export const JA_TRANSLATED_PATHS: ReadonlySet<string> = new Set(Object.keys(JA_TRANSLATED_PAGES));
@@ -118,6 +125,8 @@ export function getJapaneseSidebarTitle(path: string): string | undefined {
 const JA_SECTION_TITLES: Record<string, string> = {
   'Development process': '開発プロセス',
   Linking: 'リンク',
+  'Write native code': 'ネイティブコードを書く',
+  'Build locally': 'ローカルでビルドする',
   'Expo tutorial': 'Expo チュートリアル',
   'Build with AI tutorial': 'AI エージェントで作るチュートリアル',
   'CI/CD tutorial': 'CI/CD チュートリアル',

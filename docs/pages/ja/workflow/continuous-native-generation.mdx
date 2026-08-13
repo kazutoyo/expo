@@ -52,7 +52,7 @@ Prebuild は次のコマンドを実行すると使用できます。
 
 **android** ディレクトリと **ios** ディレクトリを持つプロジェクトの場合、EAS Build はネイティブディレクトリに加えた変更を上書きしないよう、Prebuild を実行しません。
 
-[ローカルでコンパイル](/guides/local-app-development/#local-app-compilation) して（`npx expo prebuild` や `npx expo run:android`、`npx expo run:ios` を実行して）アプリのトラブルシューティングを行う場合でも、ビルドプロセス中に新しいネイティブディレクトリを生成するために EAS Build で Prebuild を使い続けられます。**android** ディレクトリと **ios** ディレクトリは、新しいプロジェクトを作成すると自動的に **.gitignore** に追加されますが、手動で追加する必要がある場合は、**.gitignore** または [**.easignore**](/build-reference/easignore/) ファイルに追加できます。
+[ローカルでコンパイル](/ja/guides/local-app-development/#ローカルでのアプリコンパイル) して（`npx expo prebuild` や `npx expo run:android`、`npx expo run:ios` を実行して）アプリのトラブルシューティングを行う場合でも、ビルドプロセス中に新しいネイティブディレクトリを生成するために EAS Build で Prebuild を使い続けられます。**android** ディレクトリと **ios** ディレクトリは、新しいプロジェクトを作成すると自動的に **.gitignore** に追加されますが、手動で追加する必要がある場合は、**.gitignore** または [**.easignore**](/build-reference/easignore/) ファイルに追加できます。
 
 <DiffBlock
   raw={`diff --git a/.gitignore b/.gitignore

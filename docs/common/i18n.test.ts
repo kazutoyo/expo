@@ -59,6 +59,13 @@ const DEVELOPMENT_PROCESS_PAGES = [
   '/linking/into-your-app',
   '/linking/android-app-links',
   '/linking/ios-universal-links',
+  '/workflow/customizing',
+  '/guides/adopting-prebuild',
+  '/guides/local-app-overview',
+  '/guides/local-app-development',
+  '/guides/local-app-production',
+  '/guides/cache-builds-remotely',
+  '/guides/prebuilt-expo-modules',
 ];
 
 describe('hasJapaneseTranslation', () => {

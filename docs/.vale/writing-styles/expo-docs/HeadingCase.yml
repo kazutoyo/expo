@@ -24,6 +24,7 @@ exceptions:
   - '.*direnv.*'
   - '.*e2e-test.*'
   - '.*get-build.*'
+  - '.*gradle.*'
   - '.*hello\.yml.*'
   - '.*^iOS(.*)'
   - '.*iPhone.*'

@@ -1,8 +1,14 @@
 {
+  "guides/adopting-prebuild.mdx": "4056e068583f7733",
   "guides/apple-privacy.mdx": "fbb2c113ede71df3",
+  "guides/cache-builds-remotely.mdx": "a9f11bedc882cfb7",
   "guides/environment-variables.mdx": "8ca808582c5767af",
+  "guides/local-app-development.mdx": "06fbddff985ca66e",
+  "guides/local-app-overview.mdx": "31e3fef51f3cc31a",
+  "guides/local-app-production.mdx": "b3c2a0725917757e",
   "guides/overview.mdx": "96f40ab2e19c365d",
   "guides/permissions.mdx": "a1f88229d283024b",
+  "guides/prebuilt-expo-modules.mdx": "c1c6eae59839eff3",
   "linking/android-app-links.mdx": "9a8dc149a5942aa7",
   "linking/into-other-apps.mdx": "7bd4d81afc7829d0",
   "linking/into-your-app.mdx": "17bc44bd0dc4a3d4",
@@ -51,6 +57,7 @@
   "tutorial/screenshot.mdx": "1f7567059ee1b6b0",
   "workflow/configuration.mdx": "c96f174ac3338aa0",
   "workflow/continuous-native-generation.mdx": "909e0f067b3d7e85",
+  "workflow/customizing.mdx": "ae9b5322a8ccc663",
   "workflow/overview.mdx": "aa94f996a5ef1ae6",
   "workflow/using-libraries.mdx": "0666c1577dd1055c"
 }
