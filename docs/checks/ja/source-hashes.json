@@ -1,4 +1,10 @@
 {
+  "bare/install-dev-builds-in-bare.mdx": "ccf29a8679c55a0d",
+  "bare/installing-expo-modules.mdx": "c5dfa6d9addfa087",
+  "bare/installing-updates.mdx": "58728de929b411a4",
+  "bare/overview.mdx": "81ee33cef47c3e35",
+  "bare/upgrade.mdx": "1261ad40fefa5ba8",
+  "bare/using-expo-cli.mdx": "21baa13af1b94020",
   "guides/adopting-prebuild.mdx": "4056e068583f7733",
   "guides/analyzing-bundles.mdx": "40dccaa27e963a86",
   "guides/apple-privacy.mdx": "fbb2c113ede71df3",

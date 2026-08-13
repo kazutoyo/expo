@@ -119,6 +119,12 @@ const JA_TRANSLATED_PAGES: Record<string, string> = {
   '/guides/tree-shaking': 'ツリーシェイキング',
   '/guides/minify': '圧縮',
   '/guides/why-metro': 'Metro を使う理由',
+  '/bare/overview': '概要',
+  '/bare/installing-expo-modules': 'Expo モジュールをインストールする',
+  '/bare/using-expo-cli': 'Expo CLI へ移行する',
+  '/bare/installing-updates': 'expo-updates をインストールする',
+  '/bare/install-dev-builds-in-bare': 'expo-dev-client をインストールする',
+  '/bare/upgrade': 'ネイティブプロジェクトのアップグレードヘルパー',
 };
 
 export const JA_TRANSLATED_PATHS: ReadonlySet<string> = new Set(Object.keys(JA_TRANSLATED_PAGES));
@@ -142,6 +148,7 @@ const JA_SECTION_TITLES: Record<string, string> = {
   'Build locally': 'ローカルでビルドする',
   Web: 'web',
   Bundling: 'バンドル',
+  'Existing React Native apps': '既存の React Native アプリ',
   'Expo tutorial': 'Expo チュートリアル',
   'Build with AI tutorial': 'AI エージェントで作るチュートリアル',
   'CI/CD tutorial': 'CI/CD チュートリアル',

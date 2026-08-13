@@ -170,7 +170,7 @@ Prebuild はテンプレートファイルから開始し、それを config plu
 
 ## オプションであること
 
-Prebuild は任意で、Expo のあらゆるツールやサービスとシームレスに連携します。ネイティブプロジェクトを手動で管理している[既存の React Native プロジェクト](/bare/overview/)では、手動のカスタマイズを上書きしてしまうおそれがあるため `npx expo prebuild` を使用しないでください。開発者は他の Expo ツールやワークフローを採用しつつ、（[ネイティブプロジェクトへの直接的な変更](/more/glossary-of-terms/#bare-workflow)）を続けることができます。その後、手動のカスタマイズを app config や config plugin に移行し、CNG を採用することもできます。
+Prebuild は任意で、Expo のあらゆるツールやサービスとシームレスに連携します。ネイティブプロジェクトを手動で管理している[既存の React Native プロジェクト](/ja/bare/overview/)では、手動のカスタマイズを上書きしてしまうおそれがあるため `npx expo prebuild` を使用しないでください。開発者は他の Expo ツールやワークフローを採用しつつ、（[ネイティブプロジェクトへの直接的な変更](/more/glossary-of-terms/#bare-workflow)）を続けることができます。その後、手動のカスタマイズを app config や config plugin に移行し、CNG を採用することもできます。
 
 [EAS](/eas/)、Expo CLI、Expo SDK 内のライブラリを含む Expo が提供するすべてのものは、既存の React Native プロジェクトを**完全にサポート**するように作られています。これは `npx expo prebuild` を使うプロジェクトをサポートするための最低条件だからです。唯一の例外は [Expo Go](https://expo.dev/go) アプリで、Expo Go ランタイムに存在しないネイティブコードに対する JavaScript のフォールバックが含まれている場合に限り、任意の React Native プロジェクトを読み込めます。
 

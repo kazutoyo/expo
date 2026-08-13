@@ -79,6 +79,12 @@ const DEVELOPMENT_PROCESS_PAGES = [
   '/guides/tree-shaking',
   '/guides/minify',
   '/guides/why-metro',
+  '/bare/overview',
+  '/bare/installing-expo-modules',
+  '/bare/using-expo-cli',
+  '/bare/installing-updates',
+  '/bare/install-dev-builds-in-bare',
+  '/bare/upgrade',
 ];
 
 describe('hasJapaneseTranslation', () => {
