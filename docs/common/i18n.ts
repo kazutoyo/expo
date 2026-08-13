@@ -92,7 +92,7 @@ const JA_TRANSLATED_PAGES: Record<string, string> = {
   '/workflow/continuous-native-generation': 'Continuous Native Generation',
   '/workflow/using-libraries': 'ライブラリを使う',
   '/guides/apple-privacy': 'プライバシーマニフェスト',
-  '/guides/permissions': '権限',
+  '/guides/permissions': 'パーミッション',
   '/guides/environment-variables': '環境変数',
 };
 

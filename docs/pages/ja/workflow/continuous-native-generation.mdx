@@ -196,7 +196,7 @@ React Native ライブラリの作者は、いくつかの方法で CNG を採�
 
 - **インストール後に追加のセットアップが不要なネイティブコード**: ネイティブコードを持つライブラリの多くは、ネイティブアプリのビルド前に実行される [Expo Autolinking](/more/glossary-of-terms#autolinking) によって、自動的にインストール・リンクできます。
 
-- **追加の設定の副作用とセットアップが必要な場合**: 追加の設定の副作用を必要とするライブラリは、そのライブラリ向けに [Expo config plugin](/config-plugins/introduction/) を作成することで CNG を採用できます。この方法により、ライブラリの作者は **Info.plist** への権限メッセージの追加や、Xcode プロジェクトへのターゲットの注入といった値の追加を自動化できます。
+- **追加の設定の副作用とセットアップが必要な場合**: 追加の設定の副作用を必要とするライブラリは、そのライブラリ向けに [Expo config plugin](/config-plugins/introduction/) を作成することで CNG を採用できます。この方法により、ライブラリの作者は **Info.plist** へのパーミッションメッセージの追加や、Xcode プロジェクトへのターゲットの注入といった値の追加を自動化できます。
 
 - **ネイティブランタイムのフックに依存するライブラリ**: `AppDelegate`、`MainActivity`、`MainApplication` などを介した初回起動 URL のインターセプトのような、特定のネイティブランタイムのフックに依存するライブラリは、Expo Modules API の [**Lifecycle listener**](/modules/android-lifecycle-listeners/) を利用できます。これらの lifecycle listener を使うと、これらの標準的なネイティブプロジェクトファイルを変更する代わりに、Expo Autolinking を介してこれらのランタイムフックを適用でき、config plugin が不要になります。
 
@@ -278,7 +278,7 @@ Expo Prebuild は CNG の処理を効率化します。ここでは、Prebuild �
 
 <Collapsible summary="Prebuild で依存関係の副作用をどう管理できますか？">
 
-複雑なネイティブパッケージの多くは、インストールと [autolinking](/more/glossary-of-terms#autolinking) 以上の追加のセットアップを必要とします。たとえばカメラライブラリは、Android では **AndroidManifest.xml** に、iOS では **Info.plist** に権限の設定を追加する必要があります。この追加のセットアップは、パッケージの設定の副作用と考えることができます。必要な副作用のコードをプロジェクトのネイティブファイルに貼り付けると、対処が難しいネイティブのコンパイルエラーにつながる可能性があり、しかもそれはあなたが所有し保守することになるコードでもあります。
+複雑なネイティブパッケージの多くは、インストールと [autolinking](/more/glossary-of-terms#autolinking) 以上の追加のセットアップを必要とします。たとえばカメラライブラリは、Android では **AndroidManifest.xml** に、iOS では **Info.plist** にパーミッションの設定を追加する必要があります。この追加のセットアップは、パッケージの設定の副作用と考えることができます。必要な副作用のコードをプロジェクトのネイティブファイルに貼り付けると、対処が難しいネイティブのコンパイルエラーにつながる可能性があり、しかもそれはあなたが所有し保守することになるコードでもあります。
 
 **Prebuild を使うと**、誰よりも自分のライブラリの設定方法を知っているライブラリの作者が、[config plugin](/config-plugins/introduction/) と呼ばれるテスト可能でバージョン管理されたスクリプトを作成し、そのライブラリに必要な設定の副作用の追加を自動化できます。これにより、ライブラリの副作用をより表現力豊かで、強力かつ安定したものにできます。ネイティブコードの副作用については、デフォルトの [prebuild テンプレート](#テンプレート) に標準で含まれている [Android Lifecycle Listener](/modules/android-lifecycle-listeners) と [AppDelegate Subscriber](/modules/appdelegate-subscribers) も提供しています。
 
