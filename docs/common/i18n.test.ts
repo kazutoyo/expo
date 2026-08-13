@@ -74,6 +74,11 @@ const DEVELOPMENT_PROCESS_PAGES = [
   '/guides/progressive-web-apps',
   '/guides/tailwind',
   '/guides/local-https-development',
+  '/guides/customizing-metro',
+  '/guides/analyzing-bundles',
+  '/guides/tree-shaking',
+  '/guides/minify',
+  '/guides/why-metro',
 ];
 
 describe('hasJapaneseTranslation', () => {

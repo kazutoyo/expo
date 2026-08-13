@@ -114,6 +114,11 @@ const JA_TRANSLATED_PAGES: Record<string, string> = {
   '/guides/progressive-web-apps': 'プログレッシブ web アプリ',
   '/guides/tailwind': 'Tailwind CSS',
   '/guides/local-https-development': 'ローカル HTTPS 開発',
+  '/guides/customizing-metro': 'Metro でバンドルする',
+  '/guides/analyzing-bundles': 'JavaScript バンドルを分析する',
+  '/guides/tree-shaking': 'ツリーシェイキング',
+  '/guides/minify': '圧縮',
+  '/guides/why-metro': 'Metro を使う理由',
 };
 
 export const JA_TRANSLATED_PATHS: ReadonlySet<string> = new Set(Object.keys(JA_TRANSLATED_PAGES));
@@ -136,6 +141,7 @@ const JA_SECTION_TITLES: Record<string, string> = {
   'Write native code': 'ネイティブコードを書く',
   'Build locally': 'ローカルでビルドする',
   Web: 'web',
+  Bundling: 'バンドル',
   'Expo tutorial': 'Expo チュートリアル',
   'Build with AI tutorial': 'AI エージェントで作るチュートリアル',
   'CI/CD tutorial': 'CI/CD チュートリアル',

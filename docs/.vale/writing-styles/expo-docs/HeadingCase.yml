@@ -33,6 +33,7 @@ exceptions:
   - '.*production\.yml.*'
   - '.*react-native-config.*'
   - '.*\brefs?\b.*'
+  - '.*source-map-explorer.*'
   - '.*web.*'
   - '.*AASA.*'
   - '.*AES.*'
