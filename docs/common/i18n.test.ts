@@ -54,6 +54,11 @@ const DEVELOPMENT_PROCESS_PAGES = [
   '/guides/apple-privacy',
   '/guides/permissions',
   '/guides/environment-variables',
+  '/linking/overview',
+  '/linking/into-other-apps',
+  '/linking/into-your-app',
+  '/linking/android-app-links',
+  '/linking/ios-universal-links',
 ];
 
 describe('hasJapaneseTranslation', () => {

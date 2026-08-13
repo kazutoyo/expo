@@ -15,6 +15,7 @@ exceptions:
   - '.*app\.plugin\.js.*'
   - '.*app config.*'
   - '.*app directory.*'
+  - '.*assetlinks\.json.*'
   - '.*assets.*'
   - '.*babel-plugin.*'
   - '.*build\.yml.*'

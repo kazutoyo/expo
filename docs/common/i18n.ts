@@ -94,6 +94,11 @@ const JA_TRANSLATED_PAGES: Record<string, string> = {
   '/guides/apple-privacy': 'プライバシーマニフェスト',
   '/guides/permissions': 'パーミッション',
   '/guides/environment-variables': '環境変数',
+  '/linking/overview': '概要',
+  '/linking/into-other-apps': '他のアプリへのリンク',
+  '/linking/into-your-app': '自分のアプリへのリンク',
+  '/linking/android-app-links': 'Android App Links',
+  '/linking/ios-universal-links': 'iOS Universal Links',
 };
 
 export const JA_TRANSLATED_PATHS: ReadonlySet<string> = new Set(Object.keys(JA_TRANSLATED_PAGES));
@@ -112,6 +117,7 @@ export function getJapaneseSidebarTitle(path: string): string | undefined {
 
 const JA_SECTION_TITLES: Record<string, string> = {
   'Development process': '開発プロセス',
+  Linking: 'リンク',
   'Expo tutorial': 'Expo チュートリアル',
   'Build with AI tutorial': 'AI エージェントで作るチュートリアル',
   'CI/CD tutorial': 'CI/CD チュートリアル',
