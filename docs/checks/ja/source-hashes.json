@@ -1,4 +1,8 @@
 {
+  "guides/apple-privacy.mdx": "fbb2c113ede71df3",
+  "guides/environment-variables.mdx": "8ca808582c5767af",
+  "guides/overview.mdx": "96f40ab2e19c365d",
+  "guides/permissions.mdx": "a1f88229d283024b",
   "tutorial/add-navigation.mdx": "94865a058b99e0b1",
   "tutorial/build-a-screen.mdx": "db4ab476f71f19d4",
   "tutorial/build-with-ai/add-stickers.mdx": "d9264b410de00c48",
@@ -39,5 +43,9 @@
   "tutorial/introduction.mdx": "787b2c32b532fa9e",
   "tutorial/overview.mdx": "7556d50fbc3eb9ec",
   "tutorial/platform-differences.mdx": "8bcbde379242448e",
-  "tutorial/screenshot.mdx": "1f7567059ee1b6b0"
+  "tutorial/screenshot.mdx": "1f7567059ee1b6b0",
+  "workflow/configuration.mdx": "c96f174ac3338aa0",
+  "workflow/continuous-native-generation.mdx": "909e0f067b3d7e85",
+  "workflow/overview.mdx": "aa94f996a5ef1ae6",
+  "workflow/using-libraries.mdx": "0666c1577dd1055c"
 }

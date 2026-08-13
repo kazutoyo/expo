@@ -86,6 +86,14 @@ const JA_TRANSLATED_PAGES: Record<string, string> = {
   '/tutorial/eas/team-development': 'プレビューを共有する',
   '/tutorial/eas/using-github': 'GitHub からのビルド',
   '/tutorial/eas/next-steps': '次のステップ',
+  '/guides/overview': '概要',
+  '/workflow/overview': 'Expo でアプリを開発する',
+  '/workflow/configuration': 'app config で設定する',
+  '/workflow/continuous-native-generation': 'Continuous Native Generation',
+  '/workflow/using-libraries': 'ライブラリを使う',
+  '/guides/apple-privacy': 'プライバシーマニフェスト',
+  '/guides/permissions': '権限',
+  '/guides/environment-variables': '環境変数',
 };
 
 export const JA_TRANSLATED_PATHS: ReadonlySet<string> = new Set(Object.keys(JA_TRANSLATED_PAGES));
@@ -103,6 +111,7 @@ export function getJapaneseSidebarTitle(path: string): string | undefined {
 }
 
 const JA_SECTION_TITLES: Record<string, string> = {
+  'Development process': '開発プロセス',
   'Expo tutorial': 'Expo チュートリアル',
   'Build with AI tutorial': 'AI エージェントで作るチュートリアル',
   'CI/CD tutorial': 'CI/CD チュートリアル',

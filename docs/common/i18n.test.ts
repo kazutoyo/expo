@@ -45,6 +45,17 @@ const CICD_TUTORIAL_PAGES = [
   '/tutorial/cicd/next-steps',
 ];
 
+const DEVELOPMENT_PROCESS_PAGES = [
+  '/guides/overview',
+  '/workflow/overview',
+  '/workflow/configuration',
+  '/workflow/continuous-native-generation',
+  '/workflow/using-libraries',
+  '/guides/apple-privacy',
+  '/guides/permissions',
+  '/guides/environment-variables',
+];
+
 describe('hasJapaneseTranslation', () => {
   it('covers the Expo tutorial', () => {
     expect(hasJapaneseTranslation('/tutorial/overview')).toBe(true);
@@ -72,6 +83,13 @@ describe('hasJapaneseTranslation', () => {
     }
   });
 
+  it('covers the translated part of the Development process section', () => {
+    for (const path of DEVELOPMENT_PROCESS_PAGES) {
+      expect(hasJapaneseTranslation(path)).toBe(true);
+      expect(hasJapaneseTranslation(`/ja${path}`)).toBe(true);
+    }
+  });
+
   it('excludes sections that are not translated yet', () => {
     expect(hasJapaneseTranslation('/eas/workflows/introduction')).toBe(false);
     expect(hasJapaneseTranslation('/get-started/create-a-project')).toBe(false);
@@ -84,6 +102,7 @@ describe('isTranslatableSection', () => {
       ...BUILD_WITH_AI_PAGES,
       ...EAS_TUTORIAL_PAGES,
       ...CICD_TUTORIAL_PAGES,
+      ...DEVELOPMENT_PROCESS_PAGES,
       '/tutorial/overview',
       '/eas/workflows/introduction',
     ]) {
@@ -113,6 +132,10 @@ describe('getJapaneseSectionTitle', () => {
     expect(getJapaneseSectionTitle('Build with AI tutorial')).toBe(
       'AI エージェントで作るチュートリアル'
     );
+  });
+
+  it('translates the Development process section', () => {
+    expect(getJapaneseSectionTitle('Development process')).toBe('開発プロセス');
   });
 });
 
