@@ -1,15 +1,16 @@
 import React, { PropsWithChildren, useEffect } from 'react';
+import { useIntl } from 'react-intl';
 
 import { Collapsible } from '~/ui/components/Collapsible';
 
 type Props = PropsWithChildren<object> & { title?: string; abstract?: boolean };
 
 export const ConfigReactNative = ({ children, abstract, title }: Props) => {
-  if (!abstract) {
-    title ??= 'Are you using this library in an existing React Native app?';
-  } else {
-    title ??= 'Working in an existing React Native app?';
-  }
+  const intl = useIntl();
+
+  title ??= intl.formatMessage({
+    id: abstract ? 'configReactNativeAbstractTitle' : 'configReactNativeTitle',
+  });
 
   useEffect(() => {
     if (typeof children === 'string') {

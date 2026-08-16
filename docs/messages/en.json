@@ -45,5 +45,14 @@
   "prerequisitesRequirementSingular": "requirement",
   "prerequisitesRequirementPlural": "requirements",
   "sidebarResetTutorial": "Reset tutorial",
-  "sidebarTutorialProgress": "{completed} of {total}"
+  "sidebarTutorialProgress": "{completed} of {total}",
+  "configReactNativeTitle": "Are you using this library in an existing React Native app?",
+  "configReactNativeAbstractTitle": "Working in an existing React Native app?",
+  "nativeUpgradeFromVersion": "From SDK version:",
+  "nativeUpgradeToVersion": "To SDK version:",
+  "nativeUpgradePromptTitle": "Upgrading with an AI agent?",
+  "nativeUpgradePromptDescription": "Copy a ready-to-run prompt with the full diff and apply instructions, then paste it into your AI assistant to update your native projects configuration.",
+  "nativeUpgradePromptCopy": "Copy prompt",
+  "nativeUpgradePromptCopied": "Copied!",
+  "nativeUpgradePromptCopiedStatus": "Prompt copied to clipboard"
 }

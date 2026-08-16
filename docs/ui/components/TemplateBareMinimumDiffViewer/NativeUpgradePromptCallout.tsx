@@ -2,6 +2,7 @@ import { Button, mergeClasses } from '@expo/styleguide';
 import { ClipboardIcon } from '@expo/styleguide-icons/outline/ClipboardIcon';
 import { MagicWand01Icon } from '@expo/styleguide-icons/outline/MagicWand01Icon';
 import { useMemo } from 'react';
+import { useIntl } from 'react-intl';
 
 import { useCopy } from '~/common/useCopy';
 import { CALLOUT, FOOTNOTE } from '~/ui/components/Text';
@@ -28,6 +29,7 @@ export function NativeUpgradePromptCallout({
     [fromVersion, toVersion, diff, url]
   );
   const { copiedIsVisible, onCopyAsync } = useCopy(prompt);
+  const intl = useIntl();
 
   if (!diff) {
     return null;
@@ -43,10 +45,11 @@ export function NativeUpgradePromptCallout({
       <div className="flex gap-3 sm:flex-1">
         <MagicWand01Icon aria-hidden="true" className="mt-0.5 icon-sm shrink-0 text-info" />
         <div>
-          <CALLOUT weight="medium">Upgrading with an AI agent?</CALLOUT>
+          <CALLOUT weight="medium">
+            {intl.formatMessage({ id: 'nativeUpgradePromptTitle' })}
+          </CALLOUT>
           <FOOTNOTE theme="secondary" className="mt-1 block text-sm">
-            Copy a ready-to-run prompt with the full diff and apply instructions, then paste it into
-            your AI assistant to update your native projects configuration.
+            {intl.formatMessage({ id: 'nativeUpgradePromptDescription' })}
           </FOOTNOTE>
         </div>
       </div>
@@ -56,10 +59,12 @@ export function NativeUpgradePromptCallout({
         leftSlot={<ClipboardIcon aria-hidden="true" className="icon-sm" />}
         className="shrink-0 justify-center border-palette-blue11 bg-palette-blue11 text-palette-blue1 dark:border-palette-blue9 dark:bg-palette-blue9 dark:text-palette-blue2 dark:hocus:bg-palette-blue9 hocus:bg-palette-blue11 max-sm:w-full"
         onClick={() => void onCopyAsync()}>
-        {copiedIsVisible ? 'Copied!' : 'Copy prompt'}
+        {intl.formatMessage({
+          id: copiedIsVisible ? 'nativeUpgradePromptCopied' : 'nativeUpgradePromptCopy',
+        })}
       </Button>
       <span role="status" aria-live="polite" className="sr-only">
-        {copiedIsVisible ? 'Prompt copied to clipboard' : ''}
+        {copiedIsVisible ? intl.formatMessage({ id: 'nativeUpgradePromptCopiedStatus' }) : ''}
       </span>
     </div>
   );

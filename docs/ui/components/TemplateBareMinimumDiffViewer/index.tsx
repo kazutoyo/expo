@@ -1,6 +1,7 @@
 import { mergeClasses } from '@expo/styleguide';
 import { useRouter } from 'next/compat/router';
 import { useEffect } from 'react';
+import { useIntl } from 'react-intl';
 
 import versions from '~/public/static/constants/versions.json';
 import diffInfo from '~/public/static/diffs/template-bare-minimum/diffInfo.json';
@@ -16,6 +17,7 @@ const { VERSIONS } = versions;
 
 export const TemplateBareMinimumDiffViewer = () => {
   const router = useRouter();
+  const intl = useIntl();
 
   let bareDiffVersions = diffInfo.versions.slice();
 
@@ -51,7 +53,9 @@ export const TemplateBareMinimumDiffViewer = () => {
     <>
       <div className={mergeClasses('grid grid-cols-2 gap-4', 'max-sm:grid-cols-1')}>
         <div>
-          <RawH4 className="mt-2 max-sm:my-0!">From SDK version:</RawH4>
+          <RawH4 className="mt-2 max-sm:my-0!">
+            {intl.formatMessage({ id: 'nativeUpgradeFromVersion' })}
+          </RawH4>
           <VersionSelector
             version={fromVersion as string}
             setVersion={newFromVersion =>
@@ -61,7 +65,9 @@ export const TemplateBareMinimumDiffViewer = () => {
           />
         </div>
         <div>
-          <RawH4 className="mt-2 max-sm:my-0!">To SDK version:</RawH4>
+          <RawH4 className="mt-2 max-sm:my-0!">
+            {intl.formatMessage({ id: 'nativeUpgradeToVersion' })}
+          </RawH4>
           <VersionSelector
             version={toVersion as string}
             setVersion={newToVersion =>

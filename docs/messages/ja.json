@@ -45,5 +45,14 @@
   "prerequisitesRequirementSingular": "件",
   "prerequisitesRequirementPlural": "件",
   "sidebarResetTutorial": "チュートリアルをリセット",
-  "sidebarTutorialProgress": "{completed} / {total}"
+  "sidebarTutorialProgress": "{completed} / {total}",
+  "configReactNativeTitle": "既存の React Native アプリでこのライブラリを使っていますか？",
+  "configReactNativeAbstractTitle": "既存の React Native アプリで作業していますか？",
+  "nativeUpgradeFromVersion": "移行元の SDK バージョン：",
+  "nativeUpgradeToVersion": "移行先の SDK バージョン：",
+  "nativeUpgradePromptTitle": "AI エージェントでアップグレードしますか？",
+  "nativeUpgradePromptDescription": "差分の全体と適用手順を含む、そのまま実行できるプロンプトをコピーし、AI アシスタントに貼り付けてネイティブプロジェクトの設定を更新しましょう。",
+  "nativeUpgradePromptCopy": "プロンプトをコピー",
+  "nativeUpgradePromptCopied": "コピーしました！",
+  "nativeUpgradePromptCopiedStatus": "プロンプトをクリップボードにコピーしました"
 }
