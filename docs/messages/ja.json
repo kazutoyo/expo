@@ -54,5 +54,8 @@
   "nativeUpgradePromptDescription": "差分の全体と適用手順を含む、そのまま実行できるプロンプトをコピーし、AI アシスタントに貼り付けてネイティブプロジェクトの設定を更新しましょう。",
   "nativeUpgradePromptCopy": "プロンプトをコピー",
   "nativeUpgradePromptCopied": "コピーしました！",
-  "nativeUpgradePromptCopiedStatus": "プロンプトをクリップボードにコピーしました"
+  "nativeUpgradePromptCopiedStatus": "プロンプトをクリップボードにコピーしました",
+  "nativeUpgradeDiffHeading": "SDK {fromVersion} から {toVersion} へのネイティブコードの変更",
+  "nativeUpgradeVersionOptionsLabel": "SDK バージョン",
+  "nativeUpgradeVersionSelectorLabel": "SDK バージョンの選択"
 }

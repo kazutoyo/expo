@@ -1,4 +1,5 @@
 import { Beaker02Icon } from '@expo/styleguide-icons/outline/Beaker02Icon';
+import { useIntl } from 'react-intl';
 
 import { versionToText } from '~/common/utilities';
 import packageJson from '~/package.json';
@@ -22,6 +23,8 @@ export const VersionSelector = ({
   setVersion,
   availableVersions,
 }: VersionSelectorProps) => {
+  const intl = useIntl();
+
   return (
     <Select
       className="min-w-full"
@@ -32,8 +35,8 @@ export const VersionSelector = ({
         label: versionToText(version),
         Icon: version === 'unversioned' ? Beaker02Icon : undefined,
       }))}
-      optionsLabel="SDK version"
-      ariaLabel="SDK version selector"
+      optionsLabel={intl.formatMessage({ id: 'nativeUpgradeVersionOptionsLabel' })}
+      ariaLabel={intl.formatMessage({ id: 'nativeUpgradeVersionSelectorLabel' })}
     />
   );
 };

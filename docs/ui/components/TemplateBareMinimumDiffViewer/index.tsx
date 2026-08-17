@@ -80,7 +80,7 @@ export const TemplateBareMinimumDiffViewer = () => {
       {fromVersion !== toVersion ? (
         <>
           <RawH3>
-            Native code changes from SDK {fromVersion} to {toVersion}
+            {intl.formatMessage({ id: 'nativeUpgradeDiffHeading' }, { fromVersion, toVersion })}
           </RawH3>
           <NativeUpgradePromptCallout
             fromVersion={fromVersion as string}

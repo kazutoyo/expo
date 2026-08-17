@@ -54,5 +54,8 @@
   "nativeUpgradePromptDescription": "Copy a ready-to-run prompt with the full diff and apply instructions, then paste it into your AI assistant to update your native projects configuration.",
   "nativeUpgradePromptCopy": "Copy prompt",
   "nativeUpgradePromptCopied": "Copied!",
-  "nativeUpgradePromptCopiedStatus": "Prompt copied to clipboard"
+  "nativeUpgradePromptCopiedStatus": "Prompt copied to clipboard",
+  "nativeUpgradeDiffHeading": "Native code changes from SDK {fromVersion} to {toVersion}",
+  "nativeUpgradeVersionOptionsLabel": "SDK version",
+  "nativeUpgradeVersionSelectorLabel": "SDK version selector"
 }
