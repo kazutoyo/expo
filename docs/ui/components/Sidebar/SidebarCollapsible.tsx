@@ -91,7 +91,7 @@ export function SidebarCollapsible({ info, children }: Props) {
             )}
           />
         </div>
-        <CALLOUT crawlable={false}>{info.name}</CALLOUT>
+        <CALLOUT crawlable={false}>{info.sidebarTitle ?? info.name}</CALLOUT>
       </ButtonBase>
       {isOpen && (
         <div aria-hidden={!isOpen ? 'true' : 'false'} className="pl-2.5">
