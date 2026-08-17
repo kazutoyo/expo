@@ -1,6 +1,6 @@
 import type { NavigationRoute } from '~/types/common';
 
-import { getBreadcrumbTrail, isReferencePath } from './routes';
+import { getBreadcrumbTrail, isReferencePath, localizeRoutes } from './routes';
 
 describe(isReferencePath, () => {
   it('returns true for unversioned pathname', () => {
@@ -188,5 +188,75 @@ describe(getBreadcrumbTrail, () => {
       name: 'Environment variables',
       url: 'https://docs.expo.dev/eas/environment-variables',
     });
+  });
+});
+
+describe(localizeRoutes, () => {
+  /** "Reference" is a group name that repeats across sections, only one of which is translated. */
+  const routes: NavigationRoute[] = [
+    {
+      type: 'section',
+      name: 'Development process',
+      href: '',
+      children: [
+        {
+          type: 'group',
+          name: 'Reference',
+          href: '',
+          children: [{ type: 'page', name: 'Work with monorepos', href: '/guides/monorepos' }],
+        },
+      ],
+    },
+    {
+      type: 'section',
+      name: 'Expo Router',
+      href: '',
+      children: [
+        {
+          type: 'group',
+          name: 'Reference',
+          href: '',
+          children: [{ type: 'page', name: 'Testing', href: '/router/reference/testing' }],
+        },
+      ],
+    },
+  ];
+
+  it('leaves routes untouched for the English locale', () => {
+    expect(localizeRoutes(routes, 'en')).toBe(routes);
+  });
+
+  it('translates a group that holds a translated page', () => {
+    const [developmentProcess] = localizeRoutes(routes, 'ja');
+
+    expect(developmentProcess.sidebarTitle).toBe('開発プロセス');
+    expect(developmentProcess.children?.[0].sidebarTitle).toBe('リファレンス');
+  });
+
+  it('leaves the same group name alone in a section that has no translation', () => {
+    const [, expoRouter] = localizeRoutes(routes, 'ja');
+
+    expect(expoRouter.children?.[0].sidebarTitle).toBeUndefined();
+    expect(expoRouter.children?.[0].name).toBe('Reference');
+  });
+
+  it('keeps the group name in English so the collapse state key is stable', () => {
+    const [developmentProcess] = localizeRoutes(routes, 'ja');
+
+    expect(developmentProcess.children?.[0].name).toBe('Reference');
+  });
+
+  it('points a translated page at its Japanese path', () => {
+    const [developmentProcess] = localizeRoutes(routes, 'ja');
+    const page = developmentProcess.children?.[0].children?.[0];
+
+    expect(page?.href).toBe('/ja/guides/monorepos');
+    expect(page?.sidebarTitle).toBe('monorepo で開発する');
+  });
+
+  it('leaves an untranslated page on its English path', () => {
+    const [, expoRouter] = localizeRoutes(routes, 'ja');
+
+    expect(expoRouter.children?.[0].children?.[0].href).toBe('/router/reference/testing');
   });
 });

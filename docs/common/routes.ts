@@ -218,6 +218,15 @@ export function localizeRoutes<T extends NavigationRoute | NavigationRouteWithSe
   return routes.map(route => localizeRoute(route, locale));
 }
 
+/** Whether any page below this section or group has a Japanese translation. */
+function hasTranslatedDescendant(route: NavigationRoute | NavigationRouteWithSection): boolean {
+  return (route.children ?? []).some(child =>
+    child.type === 'page'
+      ? isInternalHref(child.href) && hasJapaneseTranslation(child.href)
+      : hasTranslatedDescendant(child)
+  );
+}
+
 function localizeRoute<T extends NavigationRoute | NavigationRouteWithSection>(
   route: T,
   locale: SupportedLocale
@@ -238,7 +247,11 @@ function localizeRoute<T extends NavigationRoute | NavigationRouteWithSection>(
   }
   if (locale === 'ja' && next.type !== 'page' && route.name) {
     const translatedSection = getJapaneseSectionTitle(route.name);
-    if (translatedSection) {
+    // A group name like "Reference" or "Web" appears in several sections. Translating it
+    // where nothing below it is translated would suggest the pages are available in
+    // Japanese when they are not, so only rename a group that actually holds a
+    // translation.
+    if (translatedSection && hasTranslatedDescendant(route)) {
       next.sidebarTitle = translatedSection;
     }
   }
